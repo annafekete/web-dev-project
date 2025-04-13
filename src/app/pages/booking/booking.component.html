@@ -1,0 +1,13 @@
+<form (ngSubmit)="submitBooking()">
+  <mat-form-field appearance="fill">
+    <mat-label>Név</mat-label>
+    <input matInput [(ngModel)]="booking.name" name="name" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Dátum</mat-label>
+    <input matInput type="date" [(ngModel)]="booking.date" name="date" required />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Foglalás</button>
+</form>

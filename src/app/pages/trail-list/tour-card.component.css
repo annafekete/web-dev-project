@@ -1,0 +1,51 @@
+.tour-card {
+    background-color: #f9fefb;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+    overflow: hidden;
+  }
+  
+  .tour-card:hover {
+    transform: translateY(-4px);
+  }
+  
+  /* Kiemeltebb cím */
+  mat-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1c2e26;
+  }
+  
+  /* Szövegek */
+  mat-card-subtitle,
+  mat-card-content {
+    color: #2e4d41;
+  }
+  
+  /* Részletek gomb - zöld háttér, fehér szöveg */
+  mat-card-actions button {
+    background-color: #2e4d41 !important;
+    color: white !important;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    text-transform: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  mat-card-actions button:hover {
+    background-color: #3a5d4b !important;
+  }
+
+  @media (max-width: 600px) {
+    button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  
+    mat-card-title {
+      font-size: 1.1rem;
+    }
+  }
+  

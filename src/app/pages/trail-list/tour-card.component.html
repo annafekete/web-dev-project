@@ -1,0 +1,17 @@
+<mat-card class="tour-card">
+  <img mat-card-image [src]="tour.imageUrl" alt="{{ tour.title }}" />
+  <mat-card-header>
+    <mat-card-title>{{ tour.title }}</mat-card-title>
+    <mat-card-subtitle>{{ tour.difficulty | difficultyLabel }} • {{ tour.duration }} óra</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ tour.description }}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="onSelect()">
+      <mat-icon>info</mat-icon>
+      Részletek
+    </button>
+  </mat-card-actions>
+</mat-card>
+

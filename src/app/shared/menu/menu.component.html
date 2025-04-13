@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <button mat-button routerLink="/">Kezdőlap</button>
+  <button mat-button routerLink="/tours">Túrák</button>
+  <button mat-button routerLink="/booking">Foglalás</button>
+  <span style="flex: 1 1 auto;"></span>
+
+  <ng-container *ngIf="!isLoggedIn">
+    <button mat-button routerLink="/login">Bejelentkezés</button>
+  </ng-container>
+</mat-toolbar>

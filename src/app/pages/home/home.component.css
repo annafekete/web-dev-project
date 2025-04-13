@@ -1,0 +1,40 @@
+.home-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #f9fefb;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 2rem;
+  color: #2e4d41;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.home-container p {
+  font-size: 1.1rem;
+  color: #4a665c;
+  margin-bottom: 24px;
+}
+
+.home-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  object-fit: cover;
+}
+
+.home-container button {
+  background-color: #2e4d41 !important;
+  color: white !important;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+  
