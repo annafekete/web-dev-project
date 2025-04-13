@@ -1,4 +1,7 @@
-# TripBooking
+# Túra foglaló oldal
+
+Ez a projekt egy webes alkalmazás, amely lehetővé teszi túrák böngészését és foglalását.  
+A projekt célja egy egyszerű, felhasználóbarát felület kialakítása, ahol a felhasználók túrákat kereshetnek, részleteket olvashatnak róluk, majd online foglalást végezhetnek.
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.7.
 
