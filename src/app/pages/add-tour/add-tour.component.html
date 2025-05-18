@@ -1,0 +1,28 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Cím</mat-label>
+    <input matInput [(ngModel)]="newTour.title" name="title" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Leírás</mat-label>
+    <textarea matInput [(ngModel)]="newTour.description" name="description" required></textarea>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nehézség</mat-label>
+    <input matInput [(ngModel)]="newTour.difficulty" name="difficulty" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Időtartam (óra)</mat-label>
+    <input matInput type="number" [(ngModel)]="newTour.duration" name="duration" required />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Kép URL</mat-label>
+    <input matInput [(ngModel)]="newTour.imageUrl" name="imageUrl" />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Túra hozzáadása</button>
+</form>

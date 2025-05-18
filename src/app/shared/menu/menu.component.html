@@ -2,9 +2,20 @@
   <button mat-button routerLink="/">Kezdőlap</button>
   <button mat-button routerLink="/tours">Túrák</button>
   <button mat-button routerLink="/booking">Foglalás</button>
+
+  <ng-container *ngIf="isLoggedIn">
+    <button mat-button routerLink="/add-tour">Túra feltöltése</button>
+    <button mat-button routerLink="/profile-edit">Profil szerkesztése</button>
+  </ng-container>
+
   <span style="flex: 1 1 auto;"></span>
 
   <ng-container *ngIf="!isLoggedIn">
     <button mat-button routerLink="/login">Bejelentkezés</button>
+    <button mat-button routerLink="/signup">Regisztráció</button>
+  </ng-container>
+
+  <ng-container *ngIf="isLoggedIn">
+    <button mat-button (click)="logout()">Kijelentkezés</button>
   </ng-container>
 </mat-toolbar>

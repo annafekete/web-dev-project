@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
-import { Auth, signInWithEmailAndPassword } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 
+import { Auth, createUserWithEmailAndPassword } from '@angular/fire/auth';
+
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
   imports: [
     CommonModule,
@@ -18,22 +18,23 @@ import { Router } from '@angular/router';
     MatInputModule,
     MatButtonModule
   ],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  templateUrl: './signup.component.html',
+  styleUrl: './signup.component.css'
 })
-export class LoginComponent {
+export class SignupComponent {
   email = '';
   password = '';
 
   constructor(private auth: Auth, private router: Router) {}
 
   onSubmit() {
-    signInWithEmailAndPassword(this.auth, this.email, this.password)
+    createUserWithEmailAndPassword(this.auth, this.email, this.password)
       .then(() => {
-        this.router.navigate(['/']);
+        alert('Sikeres regisztráció!');
+        this.router.navigate(['/login']);
       })
       .catch(err => {
-        alert('Hibás bejelentkezés: ' + err.message);
+        alert('Hiba: ' + err.message);
       });
   }
 }

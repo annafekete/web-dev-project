@@ -2,7 +2,15 @@
   <img mat-card-image [src]="tour.imageUrl" alt="{{ tour.title }}" />
   <mat-card-header>
     <mat-card-title>{{ tour.title }}</mat-card-title>
-    <mat-card-subtitle>{{ tour.difficulty | difficultyLabel }} • {{ tour.duration }} óra</mat-card-subtitle>
+    <mat-card-subtitle>
+  <span [ngSwitch]="tour.difficulty">
+    <ng-container *ngSwitchCase="'easy'">🟢 Könnyű</ng-container>
+    <ng-container *ngSwitchCase="'medium'">🟠 Közepes</ng-container>
+    <ng-container *ngSwitchCase="'hard'">🔴 Nehéz</ng-container>
+    <ng-container *ngSwitchDefault>⚪️ Ismeretlen</ng-container>
+  </span>
+      • {{ tour.duration }} óra
+    </mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
     <p>{{ tour.description }}</p>

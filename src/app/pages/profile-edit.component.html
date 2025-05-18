@@ -1,0 +1,8 @@
+<form (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="fill">
+    <mat-label>Megjelenítendő név</mat-label>
+    <input matInput [(ngModel)]="displayName" name="displayName" required />
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit">Mentés</button>
+</form>
