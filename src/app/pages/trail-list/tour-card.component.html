@@ -20,6 +20,21 @@
       <mat-icon>info</mat-icon>
       Részletek
     </button>
+
+    <ng-container *ngIf="isAdmin">
+      <button mat-icon-button color="warn" (click)="deleteTour()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="isAdmin">
+      <button mat-button color="accent" [routerLink]="['/edit-tour', tour.id]">
+        <mat-icon>edit</mat-icon>
+        Szerkesztés
+      </button>
+    </ng-container>
+
+
   </mat-card-actions>
 </mat-card>
 

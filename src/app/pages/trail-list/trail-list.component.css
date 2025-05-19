@@ -4,3 +4,25 @@
   gap: 24px;
   padding: 32px;
 }
+.filter-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 24px auto 0;
+}
+
+.filter-buttons button {
+  background-color: #2e4d41 !important;
+  color: white !important;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 600;
+  text-transform: none;
+  transition: background-color 0.2s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #3a5d4b !important;
+}
+

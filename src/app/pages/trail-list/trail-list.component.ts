@@ -5,6 +5,7 @@ import { TourCardComponent } from './tour-card.component';
 import { DifficultyLabelPipe } from '../../pipes/difficulty-label.pipe';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import {TourService} from '../../services/tour.service';
 
 @Component({
   selector: 'app-trail-list',
@@ -14,15 +15,12 @@ import { Observable } from 'rxjs';
   styleUrl: './trail-list.component.css'
 })
 export class TrailListComponent implements OnInit {
-  tours$: Observable<Tour[]>;
+  tours$!: Observable<Tour[]>;
 
-  constructor(private firestore: Firestore) {
-    const toursCollection = collection(this.firestore, 'tours');
-    this.tours$ = collectionData(toursCollection, { idField: 'id' }) as Observable<Tour[]>;
-  }
+  constructor(private tourService: TourService) {}
 
   ngOnInit(): void {
-    console.log('TrailList betöltve');
+    this.tours$ = this.tourService.getTours();
   }
 
   ngOnDestroy(): void {
@@ -32,4 +30,25 @@ export class TrailListComponent implements OnInit {
   onTourSelected(id: string) {
     console.log('Kiválasztott túra ID:', id);
   }
+
+  loadAll() {
+    this.tours$ = this.tourService.getTours();
+  }
+
+  loadEasy() {
+    this.tours$ = this.tourService.getEasyTours();
+  }
+
+  loadSorted() {
+    this.tours$ = this.tourService.getSortedByDuration();
+  }
+
+  loadLimited() {
+    this.tours$ = this.tourService.getLimitedTours();
+  }
+
+  loadHardOrdered() {
+    this.tours$ = this.tourService.getHardToursOrdered();
+  }
+
 }

@@ -7,6 +7,7 @@ import { AddTourComponent } from './pages/add-tour/add-tour.component';
 import { authGuard } from './guards/auth.guard';
 import { SignupComponent } from './pages/signup/signup.component';
 import { ProfileEditComponent } from './pages/profile-edit.component';
+import { EditTourComponent } from './pages/edit-tour.component';
 
 
 export const routes: Routes = [
@@ -16,5 +17,6 @@ export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'add-tour', component: AddTourComponent, canActivate: [authGuard] },
-  { path: 'profile-edit', component: ProfileEditComponent }
+  { path: 'profile-edit', component: ProfileEditComponent },
+  { path: 'edit-tour/:id', component: EditTourComponent, canActivate: [authGuard] }
 ];
