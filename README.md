@@ -1,4 +1,5 @@
 # Túra foglaló oldal
+# host : https://trip-booking-9f838.web.app
 
 Ez a projekt egy webes alkalmazás, amely lehetővé teszi túrák böngészését és foglalását.  
 A projekt célja egy egyszerű, felhasználóbarát felület kialakítása, ahol a felhasználók túrákat kereshetnek, részleteket olvashatnak róluk, majd online foglalást végezhetnek.
